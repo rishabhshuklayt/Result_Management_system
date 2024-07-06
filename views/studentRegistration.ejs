@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-primary text-white">
+                <h3 class="card-title text-center">Student Registration</h3>
+            </div>
+            <div class="card-body">
+                <form action="/student/register" method="post" enctype="multipart/form-data">
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="rollNumber" class="form-label">Roll Number</label>
+                        <input type="text" class="form-control" id="rollNumber" name="rollNumber" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control" id="dateOfBirth" name="dateOfBirth" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label><br>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                            <label class="form-check-label" for="male">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                            <label class="form-check-label" for="female">Female</label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phoneNo" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phoneNo" name="phoneNo" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="stuAvatar" class="form-label">Profile Picture</label>
+                        <input type="file" class="form-control" id="stuAvatar" name="stuAvatar" accept="image/*" required>
+                        <small class="form-text text-muted">Upload a professional passport size photo.</small>
+                    </div>
+                    <div class="mb-3">
+                        <label for="yearOfStudy" class="form-label">Year of Study</label>
+                        <select class="form-select" id="yearOfStudy" name="yearOfStudy" required>
+                            <option value="" selected disabled>Choose Year of Study</option>
+                            <option value="1st Year">1st Year</option>
+                            <option value="Lateral Entry">Lateral Entry</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="department" class="form-label">Department</label>
+                        <select class="form-select" id="department" name="department" required>
+                            <option value="" selected disabled>Choose Department</option>
+                            <option value="Bachelors of Technology">Bachelors of Technology (B.Tech)</option>
+                            <option value="Polytechnic(Diploma)">Polytechnic (Diploma)</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="branch" class="form-label">Branch</label>
+                        <select class="form-select" id="branch" name="branch" required>
+                            <option value="" selected disabled>Choose Branch</option>
+                            <option value="Computer Science And Engineering">Computer Science And Engineering (CSE)</option>
+                            <option value="AI/ML">AI/ML</option>
+                            <option value="Data Science">Data Science</option>
+                            <option value="Information Technology">Information Technology (IT)</option>
+                            <option value="Electrical Engineering">Electrical Engineering (EE)</option>
+                            <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering (ECE)</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering (ME)</option>
+                            <option value="Civil">Civil</option>
+                        </select>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Set Pasword</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                      
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit"  class="btn btn-primary">Register</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,36 @@
+<%- include('./partials/navbar') %>
+<div id="layoutSidenav">
+  <%- include('./partials/sidebar') %>
+  <div id="layoutSidenav_content">
+    <div class="container mt-5">
+      <h1>1st Semester</h1>
+      
+     <a style="text-decoration: none;" href="#formCollapse" data-toggle="collapse" aria-controls="formCollapse" aria-expanded="false"> <div class="alert alert-success" role="alert">
+        Click here to fill the subjects And Uplaod it
+      </div></a>
+      <form action="/store/subject" class="collapse" id="formCollapse" method="post">
+        <div class="form-group container">
+          <div class="row mb-3">
+            <div class="col">
+              <input type="text" name="code" class="form-control" placeholder="Code" aria-label="Code">
+            </div>
+            <div class="col">
+              <input type="text" name="name" class="form-control" placeholder="Name" aria-label="Name">
+            </div>
+            <div class="col">
+              <select name="type" class="form-select">
+                <option value="Theory">Theory</option>
+                <option value="Practical">Practical</option>
+              </select>
+            </div>
+          </div>
+          <!-- Repeat the block above for additional rows as needed -->
+          <input type="submit" value="Submit" class="btn btn-primary">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

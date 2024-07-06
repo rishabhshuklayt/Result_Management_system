@@ -1,0 +1,82 @@
+<%-include('./partials/header')%>
+<style>
+    #myTable,#my2Table thead th{
+        background-color: #55ef53;
+        color: #fff;
+        font-weight: bold;
+    }
+    tbody tr{
+        background-color: #fff;
+        color: #000;
+        font-weight: bold;
+    }
+
+</style>
+<div class="container mt-5">
+    <h1>Exam Dashboard</h1>
+    <table id="myTable" class="display">
+        <thead>
+            <tr>
+                <th>Process</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Action</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr>
+                    <td>Fill Examination Form</td>
+                    <td>Exam Form Even</td>
+                    <td>5/6/2024 11:00:00 AM</td>
+                    <td>6/15/2024 11:59:59 PM</td>
+                    <td><a href="/exam/form/<%=students.rollNumber%>">open</a></td>
+                   
+                </tr>
+        
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="container mt-5">
+    <!-- <h1>Exam Dashboard</h1> -->
+    <table id="my2Table" class="display">
+        <thead>
+            <tr>
+                <th>Filled Regular</th>
+                <th>Filled COPs</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+           
+                <tr>
+                    <td>Fill Examination Form</td>
+                    <td><a href="">Closed</a></td>
+                   
+                </tr>
+        
+        </tbody>
+    </table>
+</div>
+<hr>
+   <!-- DataTables Responsive JS -->
+   <script src="https://cdn.datatables.net/responsive/2.2.5/js/dataTables.responsive.min.js"></script>  
+   <!-- DataTables Responsive CSS -->
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.5/css/responsive.dataTables.min.css">
+ <!-- DataTables JS -->
+ <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+ 
+<script>
+    $(document).ready(function() {
+        $('#myTable, #my2Table').DataTable({
+            searching:false,
+            paging: false,
+            responsive: true
+        });
+    });
+</script>
+</body>
+</html>
